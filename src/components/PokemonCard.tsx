@@ -1,20 +1,23 @@
+interface PokemonProps  {
+  name : string
+  image? : string
+}
 
-function PokemonCard({pokemon}){
- 
-    return <figure>
-                {pokemon.imgSrc ?(
-                <img src={pokemon.imgSrc} alt= {pokemon.name} />
-                ) : (
-                  <p>???</p>
-                )}
-                <figcaption>
-                  <p>{pokemon.name}</p>
-                </figcaption>
-            </figure>
+function PokemonCard({name, image } : PokemonProps){
+        return <figure>
+                {image ?(
+                  <img src={image} alt= {name} />
+                    ) : (
+                   <p>???</p>
+                 )}
+                 <figcaption>
+                   <p>{name}</p>
+                 </figcaption>
+          </figure>
  }
-  
+
 
  export default PokemonCard 
-//si pokemon .imgSrc dispo affiche la
-//sinon affiche ca ???
+//si pokemon image dispo affiche le
+//sinon affiche ceci : ???
 
