@@ -4,7 +4,8 @@ interface PokemonProps  {
 }
 
 function PokemonCard({name, image } : PokemonProps){
-        return <figure>
+        return (
+          <figure>
                 {image ?(
                   <img src={image} alt= {name} />
                     ) : (
@@ -14,10 +15,10 @@ function PokemonCard({name, image } : PokemonProps){
                    <p>{name}</p>
                  </figcaption>
           </figure>
+          )
  }
 
 
  export default PokemonCard 
-//si pokemon image dispo affiche le
-//sinon affiche ceci : ???
+
 
